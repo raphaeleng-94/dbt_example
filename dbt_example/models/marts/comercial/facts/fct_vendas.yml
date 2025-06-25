@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: fct_vendas
+    description: "Fato de vendas da emporesa"
+
+    columns:
+      - name: mes
+        description: "Mês da venda"
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
+      
+      - name: ano
+        description: "Ano da venda"
+          
+      - name: total_frete
+        description: "Total de frete"
+        data_tests:
+          - not_null
